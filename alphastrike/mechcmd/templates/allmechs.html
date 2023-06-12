@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Mechs</h1>
+<ul>
+{% for Mech in mech_list %}
+<div class="card">
+    <div class="card-header">
+        {{ Mech.Name }}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{Mech}}</h5>
+      <p class="card-text"><ul><li>Roll: {{ Mech.Roll}}</li>
+        <li>Point Cost: {{ Mech.Pointcost}}</li>
+        <li>Size: {{ Mech.Size}}</li>
+        <li>Armor: {{ Mech.Armor}}</li>
+        <li>Structure: {{ Mech.Structure}}</li>
+      <a href="{{Mech.MechURL}}" class="btn btn-primary">Go</a></ul>
+    </div>
+  </div>
+    
+<ul>
+
+
+</ul>
+{% endfor %}
+
+</ul>
+
+{% endblock %}

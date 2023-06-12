@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+    {% if searched %}
+        <p>searched</p>
+        {% for mech in Mechs %}
+            {{Name}}<br/>
+        {% endfor %}
+    {% else %}
+        <p>you didnt search</p>
+
+
+    {% endif %}
+
+
+{% endblock %}

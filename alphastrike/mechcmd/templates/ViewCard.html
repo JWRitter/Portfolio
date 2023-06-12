@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for Mech in mech_list %}
+
+    <center><img src="{{Mech.ImageMech.url}}"></center>
+    
+    <form>
+      <br>
+      <div class="row">
+        <div class="col">
+          <label for="mecharmor"><strong>Armor: {{Mech.Armor}}</strong></label>
+          <input type="text" class="form-control" id="mecharmor" placeholder={{Mech.Armor}}>
+        </div>
+        <div class="col">
+          <label for="mechstructure"><strong>Structure: {{Mech.Structure}}</strong></label>
+          <input type="text" class="form-control" id="mechstructure" placeholder={{Mech.Structure}}>
+        </div>
+        <div class="col">
+          <label for="mechheat"><strong>Heat Scale</strong></label>
+          <input type="text" class="form-control" id="mechheat" placeholder="0">
+        </div>
+        <div class="col">
+          <label for="mechskill"><strong>Pilot Skill</strong></label> 
+          <input type="text" class="form-control" id="mechskill" placeholder="4/5">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="mechengine"><strong>Engine</strong></label>
+          <input type="text" class="form-control" id="mechengine" placeholder="0">
+        </div>
+        <div class="col">
+          <label for="mecharmor"><strong>Fire Critical</strong></label>
+          <input type="text" class="form-control" id="mechfire" placeholder="0">
+        </div>
+        <div class="col">
+          <label for="mecharmor"><strong>MP Critical</strong></label>
+          <input type="text" class="form-control" id="mechmp" placeholder="0">
+        </div>
+        <div class="col">
+          <label for="mecharmor"><strong>Weapon Critical</strong></label>
+          <input type="text" class="form-control" id="mechweapons" placeholder="0">
+        </div>
+      </div>
+      
+    </form>
+
+
+{% endfor %}
+
+
+{% endblock %}
